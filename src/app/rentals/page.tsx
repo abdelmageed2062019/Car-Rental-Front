@@ -464,7 +464,7 @@ const RentalsPage = () => {
             </h3>
             <p className="text-gray-500 mb-6">
               {totalItems === 0
-                ? "You haven't made any car rentals yet. Start by browsing our available vehicles."
+                ? "You haven't made unknown car rentals yet. Start by browsing our available vehicles."
                 : "Try adjusting your search criteria or clear some filters."}
             </p>
             {totalItems === 0 && (

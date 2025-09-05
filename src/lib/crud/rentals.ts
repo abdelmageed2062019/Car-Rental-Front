@@ -331,7 +331,7 @@ export const updateRentalStatus = async (rentalId: string, status: string, admin
                throw new Error('Authentication token not found. Please log in again.');
           }
 
-          const updateData: any = { status };
+          const updateData: unknown = { status };
           if (adminNotes) updateData.adminNotes = adminNotes;
 
           const { data } = await axios.patch(`${API_URL}/api/admin/rentals/${rentalId}/status`, updateData, {
@@ -387,7 +387,7 @@ export const activateRental = async (rentalId: string): Promise<RentalResponse> 
      }
 };
 
-export const completeRental = async (rentalId: string, returnData?: any): Promise<RentalResponse> => {
+export const completeRental = async (rentalId: string, returnData?: unknown): Promise<RentalResponse> => {
      try {
           console.log('Completing rental:', `${API_URL}/api/admin/rentals/${rentalId}/complete`);
 
@@ -427,7 +427,7 @@ export const cancelRental = async (rentalId: string, reason?: string): Promise<R
                throw new Error('Authentication token not found. Please log in again.');
           }
 
-          const cancelData: any = {};
+          const cancelData: unknown = {};
           if (reason) cancelData.reason = reason;
 
           const { data } = await axios.patch(`${API_URL}/api/admin/rentals/${rentalId}/cancel`, cancelData, {

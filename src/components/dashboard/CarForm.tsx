@@ -26,7 +26,7 @@ interface CarFormProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (carData: CarData) => void;
-  car?: any; // Updated to handle existing car data
+  car?: unknown; // Updated to handle existing car data
   title: string;
 }
 
@@ -151,14 +151,14 @@ export default function CarForm({ isOpen, onClose, onSubmit, car, title }: CarFo
     }
   };
 
-  const handleInputChange = (field: keyof CarData, value: any) => {
+  const handleInputChange = (field: keyof CarData, value: unknown) => {
     setFormData(prev => ({
       ...prev,
       [field]: value,
     }));
   };
 
-  const handleTechnicalSpecsChange = (field: keyof CarData['technicalSpecs'], value: any) => {
+  const handleTechnicalSpecsChange = (field: keyof CarData['technicalSpecs'], value: unknown) => {
     setFormData(prev => ({
       ...prev,
       technicalSpecs: {

@@ -42,8 +42,8 @@ export default function BranchesPage() {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [selectedBranch, setSelectedBranch] = useState<any>(null);
-  const [editingBranch, setEditingBranch] = useState<any>(null);
+  const [selectedBranch, setSelectedBranch] = useState<unknown>(null);
+  const [editingBranch, setEditingBranch] = useState<unknown>(null);
   const [viewMode, setViewMode] = useState<"list" | "map">("list");
 
   // Fetch data
@@ -126,12 +126,12 @@ export default function BranchesPage() {
     }
   };
 
-  const openEditForm = (branch: any) => {
+  const openEditForm = (branch: unknown) => {
     setEditingBranch(branch);
     setIsFormOpen(true);
   };
 
-  const openDeleteDialog = (branch: any) => {
+  const openDeleteDialog = (branch: unknown) => {
     setSelectedBranch(branch);
     setIsDeleteDialogOpen(true);
   };
@@ -155,7 +155,7 @@ export default function BranchesPage() {
       "Egypt": "bg-orange-100 text-orange-800",
       "Canada": "bg-purple-100 text-purple-800",
       "France": "bg-pink-100 text-pink-800",
-      "Germany": "bg-gray-100 text-gray-800",
+      "Germunknown": "bg-gray-100 text-gray-800",
       "Australia": "bg-indigo-100 text-indigo-800",
       "Brazil": "bg-emerald-100 text-emerald-800",
     };

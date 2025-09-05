@@ -62,7 +62,7 @@ export default function DashboardCars() {
     refetch: refetchCars,
   } = useCars();
 
-  const cars: Car[] = carsResponse?.data?.map((car: any) => ({
+  const cars: Car[] = carsResponse?.data?.map((car: unknown) => ({
     id: car._id || car.id,
     brand: car.brand,
     year: car.year,

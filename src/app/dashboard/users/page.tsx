@@ -55,7 +55,7 @@ export default function DashboardUsers() {
   const [sortBy, setSortBy] = useState("createdAt");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [selectedUser, setSelectedUser] = useState<any>(null);
+  const [selectedUser, setSelectedUser] = useState<unknown>(null);
 
   // Debounce search term
   useEffect(() => {
@@ -169,7 +169,7 @@ export default function DashboardUsers() {
     }
   };
 
-  const openDeleteDialog = (user: any) => {
+  const openDeleteDialog = (user: unknown) => {
     setSelectedUser(user);
     setIsDeleteDialogOpen(true);
   };

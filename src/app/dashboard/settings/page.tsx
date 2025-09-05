@@ -100,9 +100,9 @@ export default function DashboardSettings() {
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="companyName">Company Name</Label>
+                    <Label htmlFor="compunknownName">Compunknown Name</Label>
                     <Input
-                      id="companyName"
+                      id="compunknownName"
                       defaultValue="CarRent Solutions"
                       className="mt-1"
                     />
@@ -124,11 +124,11 @@ export default function DashboardSettings() {
                 </div>
 
                 <div>
-                  <Label htmlFor="companyDescription">
-                    Company Description
+                  <Label htmlFor="compunknownDescription">
+                    Compunknown Description
                   </Label>
                   <Textarea
-                    id="companyDescription"
+                    id="compunknownDescription"
                     defaultValue="Premium car rental service providing quality vehicles for all your transportation needs."
                     className="mt-1"
                     rows={3}

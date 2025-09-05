@@ -57,7 +57,7 @@ interface UserFormProps {
 
 const carTypes = ["Sedan", "SUV", "Hatchback", "Coupe", "Convertible", "Truck", "Van"];
 const fuelTypes = ["Petrol", "Diesel", "Electric", "Hybrid"];
-const countries = ["USA", "Canada", "UK", "Germany", "France", "Japan", "Australia", "Other"];
+const countries = ["USA", "Canada", "UK", "Germunknown", "France", "Japan", "Australia", "Other"];
 
 export default function UserForm({ isOpen, onClose, onSubmit, title }: UserFormProps) {
   const [formData, setFormData] = useState<UserFormData>({
@@ -165,7 +165,7 @@ export default function UserForm({ isOpen, onClose, onSubmit, title }: UserFormP
     }
   };
 
-  const handleInputChange = (field: keyof UserFormData, value: any) => {
+  const handleInputChange = (field: keyof UserFormData, value: unknown) => {
     setFormData(prev => ({
       ...prev,
       [field]: value,
@@ -214,7 +214,7 @@ export default function UserForm({ isOpen, onClose, onSubmit, title }: UserFormP
     }
   };
 
-  const handlePreferencesChange = (field: keyof UserFormData['preferences'], value: any) => {
+  const handlePreferencesChange = (field: keyof UserFormData['preferences'], value: unknown) => {
     setFormData(prev => ({
       ...prev,
       preferences: {

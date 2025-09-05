@@ -219,7 +219,7 @@ export const deleteBranch = async (branchId: string): Promise<{ success: boolean
 };
 
 // Get branch statistics (computed from branches data)
-export const getBranchStats = (branches: any[]): BranchStats => {
+export const getBranchStats = (branches: unknown[]): BranchStats => {
   const totalBranches = branches.length;
   const activeBranches = branches.length; // All branches are considered active for now
   

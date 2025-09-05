@@ -28,7 +28,7 @@ export const useBranchById = (branchId: string) => {
   });
 };
 
-export const useBranchStats = (branches: any[] = []) => {
+export const useBranchStats = (branches: unknown[] = []) => {
   return {
     data: getBranchStats(branches),
     isLoading: false,

@@ -57,7 +57,7 @@ const getCountryColor = (country: string) => {
     "Egypt": "#F97316",
     "Canada": "#8B5CF6",
     "France": "#EC4899",
-    "Germany": "#6B7280",
+    "Germunknown": "#6B7280",
     "Australia": "#6366F1",
     "Brazil": "#059669",
   };

@@ -52,7 +52,7 @@ export default function DashboardRentals() {
   const [sortBy, setSortBy] = useState("createdAt");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [selectedRental, setSelectedRental] = useState<any>(null);
+  const [selectedRental, setSelectedRental] = useState<unknown>(null);
 
   // Build query parameters
   const queryParams: AdminRentalsParams = {
@@ -175,7 +175,7 @@ export default function DashboardRentals() {
     }
   };
 
-  const openDeleteDialog = (rental: any) => {
+  const openDeleteDialog = (rental: unknown) => {
     setSelectedRental(rental);
     setIsDeleteDialogOpen(true);
   };

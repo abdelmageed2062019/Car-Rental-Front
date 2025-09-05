@@ -24,7 +24,7 @@ interface BranchFormProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (branchData: BranchData) => void;
-  branch?: any;
+  branch?: unknown;
   title: string;
 }
 
@@ -82,7 +82,7 @@ export default function BranchForm({ isOpen, onClose, onSubmit, branch, title }:
     }
   };
 
-  const handleInputChange = (field: keyof BranchData, value: any) => {
+  const handleInputChange = (field: keyof BranchData, value: unknown) => {
     setFormData(prev => ({
       ...prev,
       [field]: value,
@@ -187,7 +187,7 @@ export default function BranchForm({ isOpen, onClose, onSubmit, branch, title }:
                   <SelectItem value="Egypt">Egypt</SelectItem>
                   <SelectItem value="Canada">Canada</SelectItem>
                   <SelectItem value="France">France</SelectItem>
-                  <SelectItem value="Germany">Germany</SelectItem>
+                  <SelectItem value="Germunknown">Germunknown</SelectItem>
                   <SelectItem value="Australia">Australia</SelectItem>
                   <SelectItem value="Brazil">Brazil</SelectItem>
                 </SelectContent>
@@ -218,7 +218,7 @@ export default function BranchForm({ isOpen, onClose, onSubmit, branch, title }:
                 <Input
                   id="longitude"
                   type="number"
-                  step="any"
+                  step="unknown"
                   value={formData.location.coordinates[0]}
                   onChange={(e) => handleLocationChange("longitude", parseFloat(e.target.value))}
                   placeholder="e.g., -74.0059"
@@ -229,7 +229,7 @@ export default function BranchForm({ isOpen, onClose, onSubmit, branch, title }:
                 <Input
                   id="latitude"
                   type="number"
-                  step="any"
+                  step="unknown"
                   value={formData.location.coordinates[1]}
                   onChange={(e) => handleLocationChange("latitude", parseFloat(e.target.value))}
                   placeholder="e.g., 40.7128"

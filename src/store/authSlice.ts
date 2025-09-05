@@ -35,12 +35,12 @@ interface User {
           preferredFuelType?: string;
           maxDailyBudget?: number;
      };
-     rentalHistory?: any[];
+     rentalHistory?: unknown[];
      createdAt: string;
      updatedAt: string;
      age: number;
      id: string;
-     [key: string]: string | number | boolean | null | undefined | DriverLicense | Address | any;
+     [key: string]: string | number | boolean | null | undefined | DriverLicense | Address | unknown;
 }
 
 

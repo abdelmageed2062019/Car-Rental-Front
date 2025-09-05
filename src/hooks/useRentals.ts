@@ -89,7 +89,7 @@ export const useCompleteRental = () => {
      return useMutation({
           mutationFn: ({ rentalId, returnData }: { 
                rentalId: string; 
-               returnData?: any 
+               returnData?: unknown 
           }) => completeRental(rentalId, returnData),
           onSuccess: (data, variables) => {
                queryClient.invalidateQueries({ queryKey: ["adminRentals"] });
