@@ -97,7 +97,6 @@ src/
 #### Environment Variables
 ```env
 NEXT_PUBLIC_API_BASE_URL=your_api_url
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_maps_key
 ```
 
 #### API Endpoints
